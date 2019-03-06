@@ -1,0 +1,138 @@
+body {
+    font-family: Lato, "Microsoft YaHei", sans-serif;
+    font-weight: 400;
+    font-size: 1.1em
+}
+
+h1 {
+    font-size: 3.5em;
+    margin: 0 0 0.5em 0;
+    margin-top: 0
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0 0 0.2em 0;
+    margin-top: 0
+}
+
+h3 {
+    font-size: 1.5em;
+    margin: 0 0 0.1em 0;
+    margin-top: 0
+}
+
+h4 {
+    font-size: 1.25em;
+    margin: 0 0 0.1em 0;
+    margin-top: 0
+}
+
+h5 {
+    font-size: 1.2em;
+    margin: 0 0 0.1em 0;
+    margin-top: 0
+}
+
+h6 {
+    font-size: 1.1em;
+    margin: 0 0 0.1em 0;
+    margin-top: 0
+}
+
+p {
+    font-size: 1.1em;
+    margin: 0.5em 0
+}
+
+ul {
+    font-size: 1.1em
+}
+
+a {
+    color: #008a75;
+    text-decoration: none;
+    transition: 0.5s
+}
+span{
+    word-break: break-all;
+    font-size: 0.8em;
+}
+* {
+    box-sizing: border-box
+}
+
+a:hover {
+    color: #9f3
+}
+
+a.highlight {
+    color: #9f3
+}
+
+a.highlight:hover {
+    color: #008a75
+}
+.section {
+    background-color: #17b6f3;
+    color: #eef3f0;
+    padding: 50px;
+    transition: 0.5s;
+
+}
+.center{
+    text-align: center;
+}
+#subtitle{
+    font-weight: lighter;
+    font-size: 1.1em;
+}
+#home{
+
+}
+#avatar {
+    width: 200px;
+    height: 270px;
+    border: 10px solid #aee2d9;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%
+}
+.project-container{
+    width: 100%;
+    position: relative;
+}
+.project-item{
+    padding-top: 2%;
+    text-align: center;
+    width: 48%;
+    min-height: 40%;
+    background: rgba(200,120,143,.2);
+    border-radius: 5%;
+}
+.item-desc{
+    padding-left: 10%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    text-align: left;
+}
+canvas{
+    /*display: block;*/
+    /*margin: 0 auto;*/
+}
+#chart{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    height: 80%;
+}
+.work{
+    margin: 0 auto;
+    padding-top: 2%;
+    text-align: center;
+    width: 60%;
+    min-height: 40%;
+    background: rgba(200,120,143,.2);
+    border-radius: 5%;
+}

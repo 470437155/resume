@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.6/jquery.pagepiling.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/vintage.js"></script>
+</head>
+<body>
+<div id="pagepiling" class="main">
+    <div class="section center" id="home">
+        <img id="avatar" src="img/avatar.jpg" alt="">
+        <h1 id="title">谈笑</h1>
+        <p id="subtitle">热爱前端，不断探索</p>
+        <h4>前端攻城师</h4>
+        <h6><a href="https://github.com/470437155" target="_blank">Github</a></h6>
+    </div>
+    <div class="section center" id="project">
+        <h1>项目经验</h1>
+        <div class="project-container">
+            <div class="project-item" style="float: left;">
+            <h3>Vue音乐播放器</h3>
+            <div class="item-desc">
+                <p>技术栈:</p>
+                <span>Vue,vuex,vue-router,jsonp,node.js,axios,better-scroll</span>
+                <p>项目介绍:</p>
+                <span>基于Vue全家桶 (2.x) 制作的移动端音乐 WebApp ，来源于imooc的实战课程。自己动手实践并加以修改拓展。一个媲美原生的移动端音乐 App，功能齐全，可以播放歌曲，获得推荐歌单，歌手列表，歌手详情，专辑列表，歌单&歌曲&专辑评论列表，收藏与播放历史等功能。</span>
+            </div>
+        </div>
+            <div class="project-item" style="float: right;">
+                <h3>个人在线简历</h3>
+                <div class="item-desc">
+                    <p>技术栈:</p>
+                    <span>Html,CSS,Javascript,Jquery,pagePiling.js</span>
+                    <p>项目介绍:</p>
+                    <span>一个简单的个人在线简历，主要使用Html与CSS制作，使用了pagePiling.js来实现整屏滚动效果，效果比较接近于H5页面</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section center" id="skills">
+        <h1>个人技能</h1>
+        <div id="chart"></div>
+    </div>
+    <div class="section center">
+        <h1>工作经历</h1>
+        <div class="project-container">
+            <div class="work">
+                <h3>深圳市览众科技股份有限公司</h3>
+                <div class="item-desc">
+                    <p>职位：
+                    </p>
+                    <span>前端工程师实习生     日期：2018.11-2019.3</span>
+                    <p>工作职责：</p>
+                    <span>协助项目团队开发项目，同时给予其他项目组前端技术上的支持</span>
+                    <p>工作项目：</p>
+                    <span>招商基金移动APP平台</span>
+                    <p>项目技术栈：</p>
+                    <span>
+                        Angular,Ionic,Cordova,Swiper,Echarts
+                    </span>
+                    <p>项目描述：</p>
+                    <span>一个供内部员工使用的协同办公平台，可供公司内部员工完成处理待办事项，审批，请假，产品查询，工作授权，出差审批等工作事务</span>
+                    <p>项目职责：</p>
+                    <span>
+                        1.编写动态详情页布局，实现动态信息获取，上拉加载，下拉刷新等功能
+                    </span><br>
+                    <span>
+                        2.编写产品组合详情页布局，实现产品各版块详情展示，导航条与滚动相联动
+                    </span><br>
+                    <span>
+                        3.优化启动屏时间，加快app启动时间
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section center" id="contact">
+        <h1>联系方式</h1>
+        <h2><a href="http://zhangwenli.com/" target="_blank">个人Github</a>
+        <p>Email: <a href="mailto:470437155@qq.com" target="_blank">470437155@qq.com</a></p>
+
+    </div>
+</div>
+
+
+<script>
+	$(document).ready(function () {
+		$('#pagepiling').pagepiling({
+			loopBottom: true,
+			navigation: {
+				'position': 'left',
+				'tooltips':  ['首页', '项目', '技能', '工作经历',  '联系']
+			}
+		});
+		var chart = echarts.init(document.getElementById('chart'), 'vintage');
+		chart.setOption({
+					backgroundColor: '#17b6f3',
+
+					title: {
+						text: '',
+						left: 'center',
+						top: 20,
+						textStyle: {
+							color: '#ccc'
+						}
+					},
+
+					tooltip : {
+						trigger: 'item',
+						formatter: "{a} <br/>{b} : {c} ({d}%)"
+					},
+
+					visualMap: {
+						show: false,
+						min: 80,
+						max: 600,
+						inRange: {
+							colorLightness: [0, 1]
+						}
+					},
+					series : [
+						{
+							name:'技能分布',
+							type:'pie',
+							radius : '70%',
+							center: ['50%', '50%'],
+							data:[
+								{value:450, name:'Html'},
+								{value:400, name:'CSS'},
+								{value:420, name:'Javascript'},
+								{value:375, name:'Jquery'},
+								{value:325, name:'Bootstrap'},
+								{value:400, name:'Vue'},
+								{value:325, name:'Angular'},
+								{value:400, name:'Ionic'},
+								{value:325, name:'Cordova'},
+								{value:325, name:'Echarts'}
+							].sort(function (a, b) { return a.value - b.value; }),
+							roseType: 'radius',
+							label: {
+								normal: {
+									textStyle: {
+										color: 'rgba(255, 255, 255, 0.5)',
+                                        fontSize:'20'
+									}
+								}
+							},
+							labelLine: {
+								normal: {
+									lineStyle: {
+										color: 'rgba(255, 255, 255, 0.3)'
+									},
+									smooth: 0.2,
+									length: 10,
+									length2: 20
+								}
+							},
+							itemStyle: {
+								normal: {
+									color: '#c23531',
+									shadowBlur: 200,
+									shadowColor: 'rgba(0, 0, 0, 0.5)'
+								}
+							},
+
+							animationType: 'scale',
+							animationEasing: 'elasticOut',
+							animationDelay: function (idx) {
+								return Math.random() * 200;
+							}
+						}
+					]
+				})
+	})
+</script>
+</body>
+</html>
