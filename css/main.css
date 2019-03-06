@@ -42,7 +42,8 @@ h6 {
 
 p {
     font-size: 1.1em;
-    margin: 0.5em 0
+    margin-top: 0.5em;
+    margin-bottom: 0;
 }
 
 ul {
@@ -50,9 +51,10 @@ ul {
 }
 
 a {
-    color: #008a75;
+    color: #EFF216;
     text-decoration: none;
-    transition: 0.5s
+    transition: 0.5s;
+    font-size: 36px;
 }
 span{
     word-break: break-all;
