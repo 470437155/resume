@@ -102,14 +102,18 @@ a.highlight:hover {
     border-radius: 50%
 }
 .project-container{
+    display: table;
     width: 100%;
     position: relative;
+    border-collapse: separate;
+    border-spacing: 20px 5px;
 }
 .project-item{
+    display: table-cell;
     padding-top: 2%;
     text-align: center;
     width: 48%;
-    min-height: 40%;
+    min-height: 400px;
     background: rgba(200,120,143,.2);
     border-radius: 5%;
 }
@@ -119,14 +123,10 @@ a.highlight:hover {
     padding-bottom: 5%;
     text-align: left;
 }
-canvas{
-    /*display: block;*/
-    /*margin: 0 auto;*/
-}
 #chart{
     margin: 0 auto;
     text-align: center;
-    width: 100%;
+    width: 800px;
     height: 80%;
 }
 .work{
